@@ -190,3 +190,14 @@ successfully passes the configured health check.
 - Python HTTP server
 - Basic HTML
 - AWS troubleshooting and networking
+
+## How Traffic Flows
+
+1. A user sends an HTTP request to the Application Load Balancer.
+2. The public ALB receives the request on port 80.
+3. The ALB forwards the request to a registered EC2 target.
+4. The EC2 instance is located inside a private subnet.
+5. The web application listens on port 8000.
+6. The target group's health check verifies that the application is available.
+7. Administrators access the private EC2 instance through the bastion host using SSH.
+
