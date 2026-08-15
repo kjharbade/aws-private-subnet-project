@@ -34,16 +34,24 @@ for administration.
 
 Administration:
 
-Laptop
-   |
-   | SSH
-   v
-Bastion Host
-Public Subnet
-   |
-   | SSH using private IP
-   v
-Private EC2
+                  +----------------+
+                  | Administrator  |
+                  +-------+--------+
+                          |
+                         SSH
+                          |
+                          v
+                  +----------------+
+                  | Bastion Host   |
+                  | Public Subnet  |
+                  +-------+--------+
+                          |
+                    SSH / Private IP
+                          |
+                          v
+                  +----------------+
+                  | Private EC2    |
+                  +----------------+
 
 ## AWS Services Used
 
@@ -152,7 +160,6 @@ The AWS infrastructure was deployed temporarily for hands-on
 testing and demonstration.
 
 
-
 ## Screenshots
 
 ### Application running through the Application Load Balancer
@@ -169,3 +176,17 @@ successfully passes the configured health check.
 
 ![Healthy target](screenshots/target-healthy.png)
 
+## Skills Demonstrated
+
+- AWS VPC networking
+- Public and private subnet design
+- Amazon EC2
+- Application Load Balancer
+- Target Groups and health checks
+- Security Groups
+- Bastion host configuration
+- Linux server administration
+- SSH and private-key authentication
+- Python HTTP server
+- Basic HTML
+- AWS troubleshooting and networking
