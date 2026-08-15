@@ -150,3 +150,22 @@ The private EC2 instance was not directly exposed to the Internet.
 Completed.
 The AWS infrastructure was deployed temporarily for hands-on
 testing and demonstration.
+
+
+
+## Screenshots
+
+### Application running through the Application Load Balancer
+
+The web application is hosted on an EC2 instance in a private subnet
+and is accessed through the public Application Load Balancer.
+
+![Application running through ALB](screenshots/alb-application-working.png)
+
+### ALB Target Group Health Check
+
+The private EC2 instance is registered with the target group and
+successfully passes the configured health check.
+
+![Healthy target](screenshots/target-healthy.png)
+
